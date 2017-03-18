@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+                <link rel="stylesheet" type="text/css" href="/maintenance_banner/static/src/less/banner.less" />
+            </xpath>
+        </template>
+        <template id="maintenance_banner" inherit_id="web.webclient_bootstrap">
+            <xpath expr="//nav[contains(@class,'navbar')]" position="after">
+                <t t-if="banner_data['show_banner']=='yes'">
+                    <t t-set="style" t-value="'display: block;'" /></t>
+                <t t-else="">
+                    <t t-set="style" t-value="'display: none;'" /></t>
+                <t t-if="banner_data['background']">
+                    <t t-set="style" t-value="style + 'background:' +banner_data['background'] + ';'" /></t>
+                <t t-if="banner_data['height']">
+                    <t t-set="style" t-value="style + 'height:' +banner_data['height'] + ';'" /></t>
+                <div class='maintenance_banner' t-att-style="style">
+                    <div class="inner_content">
+                        <t t-esc="banner_data['content']" />
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

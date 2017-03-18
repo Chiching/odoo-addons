@@ -1,0 +1,7 @@
+*.py[co]
+node_modules
+.venv
+libs
+dist
+/statics
+

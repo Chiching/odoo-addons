@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="maintenance_banner.list">
+      <field name="name">maintenance_banner list</field>
+      <field name="model">maintenance_banner.maintenance_banner</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="maintenance_banner.action_window">
+      <field name="name">maintenance_banner window</field>
+      <field name="res_model">maintenance_banner.maintenance_banner</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="maintenance_banner.action_server">
+      <field name="name">maintenance_banner server</field>
+      <field name="model_id" ref="model_maintenance_banner_maintenance_banner"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="maintenance_banner" id="maintenance_banner.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="maintenance_banner.menu_1" parent="maintenance_banner.menu_root"/>
+    <menuitem name="Menu 2" id="maintenance_banner.menu_2" parent="maintenance_banner.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="maintenance_banner.menu_1_list" parent="maintenance_banner.menu_1"
+              action="maintenance_banner.action_window"/>
+    <menuitem name="Server to list" id="maintenance_banner" parent="maintenance_banner.menu_2"
+              action="maintenance_banner.action_server"/>
+    -->
+  </data>
+</odoo>

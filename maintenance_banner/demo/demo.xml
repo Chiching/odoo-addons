@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="maintenance_banner_background" model="ir.config_parameter">
+            <field name="key">maintenance_banner.background</field>
+            <field name="value">yellowgreen</field>
+        </record>
+        <record id="maintenance_banner_content" model="ir.config_parameter">
+            <field name="key">maintenance_banner.content</field>
+            <field name="value">We will be conducting system maintenance from 30 Feb to 31 Feb, site will be unavailable. Please call 110 or 911 if you need assistance during this time </field>
+        </record>
+        <record id="maintenance_banner_height" model="ir.config_parameter">
+            <field name="key">maintenance_banner.height</field>
+            <field name="value">30px</field>
+        </record>
+         <record id="maintenance_banner_show_banner" model="ir.config_parameter">
+            <field name="key">maintenance_banner.show_banner</field>
+            <field name="value">yes</field>
+        </record>
+    </data>
+</odoo>
